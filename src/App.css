@@ -1,0 +1,106 @@
+.App {
+text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.background{
+  background-image: url('./img.jpg');
+  background-size: cover;
+  min-height: 800px;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.list{
+  border: 2px solid black;
+  color: red;
+  font-size: large;
+  font-weight: bold;
+  
+}
+.contact{
+  background-color: gray; 
+  font-size: large; 
+  font-weight: bold;
+  padding: 37px;
+  
+  
+}
+
+
+.form{ 
+  
+  background-color: lightgray;
+  margin: 0px 50px;
+  display: flexbox;
+  margin: 2px auto;
+}
+.list{
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  
+    border: none;
+}
+.table{
+
+  background-color: lightgray;
+}
+  
+
+.login{
+  background-color: rgb(216, 212, 212);
+ 
+    margin-top: 223px;
+    margin-right: 298px;
+    margin-left: 313px;
+  
+    padding: 36px 2px;
+}
+
+button, select {
+  text-transform: none;
+  position: absolute;
+  display: inherit;
+  background-color: blue;
+}
+.add{
+  position: relative;
+  left:500px;
+}
+  
+
+
+
