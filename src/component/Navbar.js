@@ -18,6 +18,7 @@ class Navbar extends Component {
             <ReactBootStrap.Nav.Link href="/about">About Us</ReactBootStrap.Nav.Link>
             <ReactBootStrap.Nav.Link href="/blog">Blog</ReactBootStrap.Nav.Link>
             <ReactBootStrap.Nav.Link href="/inf">Information</ReactBootStrap.Nav.Link>
+            <ReactBootStrap.Nav.Link href="/admin">Admin</ReactBootStrap.Nav.Link>
           </ReactBootStrap.Nav>
 
 

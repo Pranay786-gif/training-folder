@@ -1,11 +1,9 @@
 import React, {useState} from "react";
 import Navbar from '../Navbar';
 import axios from 'axios';
-import {useHistory} from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Contact = () => {
-    let history = useHistory();
     const [user,setUser] = useState({
        username:"",
        email:"",
@@ -20,7 +18,7 @@ const Contact = () => {
     const onSubmit = async (e)=>{
         e.preventDefault();
         await axios.post("http://localhost:3003/informations",user);
-        history.push("/inf");
+        alert("Your Information submitted successfully");
         
         
      fetch('http://solaceinfotech.co.in/projects/pranay/api/v1/?action=contact&full_name=' + user.username+'&email='+user.email+'&message='+user.message+'', {

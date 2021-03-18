@@ -47,6 +47,7 @@ const Inf=()=>{
              <Link class="btn btn-primary mr-2" to={`viewcontact/${user.id}`}>View</Link>
              <Link class="btn btn-outline-primary" to={`editcontact/${user.id}`} >Edit</Link>
              <Link class="btn btn-danger" onClick={()=>deleteUser(user.id)} >Deleat</Link>
+
              
       
              </td>

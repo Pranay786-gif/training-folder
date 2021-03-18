@@ -12,9 +12,16 @@ text-align: center;
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.navbar{
+  margin: 0rem -14rem;
+ 
+  
+  
+}
+
 
 .App-header {
-  background-color: #282c34;
+  background-color: #282c34; 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,7 +31,7 @@ text-align: center;
   color: white;
 }
 .background{
-  background-image: url('./img.jpg');
+  background-image: url('./img1.webp');
   background-size: cover;
   min-height: 800px;
 }
@@ -55,8 +62,6 @@ text-align: center;
   font-size: large; 
   font-weight: bold;
   padding: 37px;
-  
-  
 }
 
 
@@ -83,11 +88,25 @@ text-align: center;
 .login{
   background-color: rgb(216, 212, 212);
  
-    margin-top: 223px;
+    margin-top: 0px;
     margin-right: 298px;
     margin-left: 313px;
   
     padding: 36px 2px;
+}
+.log{
+  position: relative;
+  left: 1140px;
+    top: -43px;
+    background-color: lightslategray;
+  
+}
+.post{
+  position: relative;
+  left: 1197px;
+    top: -30px;
+    background-color: lightslategray;
+  
 }
 
 button, select {
@@ -99,6 +118,24 @@ button, select {
 .add{
   position: relative;
   left:500px;
+}
+.text{
+  display:block;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+
+}
+
+.error{
+  color:white;
+  font-size: large;
+  font-weight: bold;
+  
+}
+.rect{
+  background-color:lightgray;
 }
   
 
