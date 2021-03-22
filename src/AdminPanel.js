@@ -39,7 +39,7 @@ const AdminPanel = () => {
 <li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
 <li><a href="/home"><i class="fas fa-home"></i>Home</a></li>
 <li><a href="/bloga"><i class="fas fa-image"></i>blog</a></li>
-<li><a href="/contact"><i class="far fa-envelope"></i>Contact</a></li>
+<li><a href="/inf"><i class="far fa-envelope"></i>Contact</a></li>
 </ul>
 </div>
       <div id="logout">
