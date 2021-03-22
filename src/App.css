@@ -102,17 +102,10 @@ text-align: center;
 .log{
   position: relative;
   left: 1140px;
-    top: -53px;
+    top: -72px;
     background-color: lightslategray;
   
 }
-.user{
-  position: relative;
-  left: 630px;
-    top: -56px;
-    color:rgb(190, 174, 174);
-}
-  
 
 .forget{
   position: relative;
@@ -262,4 +255,63 @@ button, select {
   }
    
  }
+ @media (max-width:1334px) {
+ 
+ 
+ .log{
+   left:800px
+ }
+   
+ }
+ @media (max-width:992px) {
+ 
+ 
+  .log{
+
+    left:600px;
+    top:-30px;
+  }
+    
+  }
+  @media (max-width:770px) {
+ 
+ 
+    .log{
+  
+      left:500px;
+      
+    }
+      
+    }
+    @media (max-width:656px) {
+ 
+ 
+      .log{
+    
+        left:400px;
+        
+      }
+        
+      }
+      @media (max-width:502px) {
+ 
+ 
+        .log{
+      
+          left:300px;
+          
+        }
+          
+        }
+        @media (max-width:401px) {
+ 
+ 
+          .log{
+        
+            left:250px;
+            
+          }
+            
+          }
+ 
 

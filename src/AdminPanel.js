@@ -42,12 +42,14 @@ const AdminPanel = () => {
 <li><a href="/contact"><i class="far fa-envelope"></i>Contact</a></li>
 </ul>
 </div>
-      
+      <div id="logout">
       <button className="log" onClick={() => logout()}>
         Log Out
         <br />
+        <i className="fa fa-user user">{lo.username} </i>
       </button>
-      <i className="fa fa-user user">{lo.username} </i>
+      
+      </div>
       <div className="adminpost">
         {users.map((user,index)=>(
           <div>
