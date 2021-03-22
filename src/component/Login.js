@@ -42,7 +42,7 @@ const Login = () => {
           <input
             type="text"
             className="form-control"
-            placeholder="Enter your name"
+            placeholder="Username"
             name="username"
             value={username}
             onChange={(e) => onInputChange(e)}
