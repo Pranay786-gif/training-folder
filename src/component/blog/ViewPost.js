@@ -66,7 +66,7 @@ const ViewPost=()=>{
         <span> {(user.title) ==='' ?<ErrorPage /> :
         
         <div className="container py-4">
-        <Link className="btn btn-primary" to= "/blog"> Back to home</Link>
+        <Link className="btn btn-primary" to= "/"> Back to home</Link>
         <h1 className="display-4"> Post: {id}</h1>
         <hr/>
         <ul className="list-group w-100">

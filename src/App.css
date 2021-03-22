@@ -13,7 +13,8 @@ text-align: center;
   }
 }
 .navbar{
-  margin: 0rem -14rem;
+  margin: 0rem ;
+  
  
   
   
@@ -33,6 +34,7 @@ text-align: center;
 .background{
   background-image: url('./img1.webp');
   background-size: cover;
+  max-width:100%;
   min-height: 800px;
 }
 
@@ -94,12 +96,27 @@ text-align: center;
   
     padding: 36px 2px;
 }
+.logo{
+  padding-top:105px;
+}
 .log{
   position: relative;
   left: 1140px;
-    top: -43px;
+    top: -53px;
     background-color: lightslategray;
   
+}
+.user{
+  position: relative;
+  left: 630px;
+    top: -56px;
+    color:rgb(190, 174, 174);
+}
+  
+
+.forget{
+  position: relative;
+    left: -168px;
 }
 .post{
   position: relative;
@@ -107,6 +124,22 @@ text-align: center;
     top: -30px;
     background-color: lightslategray;
   
+}
+.password-icon{
+  position: relative;
+  top: -31px;
+  right: -194px;
+  cursor:pointer;
+}
+.footer{
+  
+  padding:1rem;
+  color:white;
+  background-color:rgb(46, 44, 44);
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%
 }
 
 button, select {
@@ -119,6 +152,10 @@ button, select {
   position: relative;
   left:500px;
 }
+.loginl{
+  position: relative;
+  left:700px;
+}
 .text{
   display:block;
   overflow:hidden;
@@ -127,7 +164,12 @@ button, select {
 
 
 }
-
+.navu{
+  position:fixed;
+  top:0;
+  left:0;
+ 
+}
 .error{
   color:white;
   font-size: large;
@@ -137,7 +179,87 @@ button, select {
 .rect{
   background-color:lightgray;
 }
+.adminpost{
+  background-color:grey;
+  width:40%;
+  padding-top:5px;
+  padding-bottom: 5px;
+}
+
+                  
   
+@media (max-width:1114px) {
+  
+ .add{
+   position:relative;
+   left:130px;
+ }
+ 
+}
+@media (max-width:1473px) {
+  
+  .loginl{
+    position:relative;
+    left:120px;
+  }
+   
+ }
+ @media (max-width:520px) {
+  
+  .background{
+    max-width:100%;
+    height:auto
+  }
+   
+ }
+ @media (max-width:1200px) {
+  
+  .login{
+    width:55%;
+    margin: 2px auto;
 
+  }
+   
+ }
+ @media (max-width:993px) {
+  
+  .login{
+    width:70%;
+    margin: 2px auto;
 
+  }
+   
+ }
+
+@media (max-width:771px) {
+ 
+ .login{
+   width:80%;
+   margin: 2px auto;
+
+ }
+ .forget{
+  position:relative;
+  left:71px;
+
+}
+  
+}
+
+@media (max-width:549px) {
+ 
+  .password-icon{
+    position:relative;
+    right:-167px;
+  }
+   
+ }
+ @media (max-width:481px) {
+ 
+  .password-icon{
+    position:relative;
+    right:-120px;
+  }
+   
+ }
 

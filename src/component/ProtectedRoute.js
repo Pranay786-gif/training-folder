@@ -4,11 +4,11 @@ import { Route,Redirect } from 'react-router-dom';
  const ProtectedRoute = ({ component:Component, ...rest }) => {
     return (
 
-        <Route {...rest} render={()=> localStorage.getItem('login') ? (
+        <Route {...rest} render={()=> localStorage.getItem('login2') ? (
             <Component />
 
         ):
-        (<Redirect to="/" />)
+        (<Redirect to="/login" />)
     
     } />
     )

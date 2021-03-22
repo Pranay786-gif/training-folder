@@ -21,7 +21,7 @@ const EditPost = () => {
     const onSubmit = async (e)=>{
         e.preventDefault();
         await axios.put(`http://localhost:3004/posts/${id}`,user);
-        history.push("/blog");
+        history.push("/");
         console.log(user.name)
 
     };

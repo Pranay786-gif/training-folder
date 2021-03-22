@@ -2,8 +2,20 @@ import React, {useState} from "react";
 import Navbar from '../Navbar';
 import axios from 'axios';
 import { Container, Row, Col } from 'react-bootstrap';
-
+import{useHistory} from 'react-router-dom';
+import Footer from '../Footer';
 const Contact = () => {
+  let history=useHistory();
+  const handleChange=()=>{
+    if(localStorage.getItem('login2')){
+
+      history.push('/contact')
+    } else{
+      history.push('/login')
+    }
+ 
+
+  }
     const [user,setUser] = useState({
        username:"",
        email:"",
@@ -25,13 +37,16 @@ const Contact = () => {
         method: 'GET', 
         
        
-      })
+      });
+      
 
     }
 
     return (
         <div> 
             <Navbar />
+            <button onClick={()=>handleChange()} className="btn btn-outline-danger loginl">Login</button>
+            
             <div >
             <Container>
               <Row>
@@ -60,6 +75,7 @@ const Contact = () => {
                 </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+            <Footer />
         </div>
       
     )

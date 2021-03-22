@@ -4,21 +4,21 @@
       "title": "About me",
       "body": "<p>i am good boy</p>",
       "date": "2021-03-03",
-      "viewcount": 12,
+      "viewcount": 14,
       "id": 1
     },
     {
       "title": "My Elder Brother",
       "body": "<p>he is a good boy</p>",
       "date": "2021-03-10",
-      "viewcount": 18,
+      "viewcount": 23,
       "id": 2
     },
     {
       "title": "title",
       "body": "hello boy",
       "date": "2021-02-10",
-      "viewcount": 20,
+      "viewcount": 34,
       "id": 3
     }
   ]

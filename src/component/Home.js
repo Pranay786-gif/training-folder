@@ -2,10 +2,23 @@ import React, { useState, useEffect } from "react";
 import * as ReactBootStrap from "react-bootstrap";
 import Navbar from "./Navbar";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import Footer from "./Footer";
+import { Link,useHistory } from "react-router-dom";
 
 
 const Home = () => {
+  let history=useHistory();
+  const handleChange=()=>{
+    if(localStorage.getItem('login2')){
+
+      history.push('/home')
+    } else{
+      history.push('/login')
+    }
+ 
+
+  }
+
   
   const [users, setUser] = useState([]);
   useEffect(() => {
@@ -24,6 +37,8 @@ const Home = () => {
   return (
     <div>
         <Navbar />
+        <button onClick={()=>handleChange()} className="btn btn-outline-danger loginl">Login</button>
+            
       <Link to="/adduser" className="btn btn-outline-light add">
         Add User
       </Link>
@@ -160,15 +175,8 @@ const Home = () => {
             </tr>
           </tbody>
         </ReactBootStrap.Table>
-        <footer className="blockquote-footer">
-          <h1>
-            {" "}
-            Someone famous in <cite title="Source Title">
-              Source Title
-            </cite>{" "}
-          </h1>
-        </footer>
       </div>
+      <Footer />
     </div>
   );
 };

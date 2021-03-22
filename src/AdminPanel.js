@@ -1,41 +1,64 @@
-import { useState} from 'react';
-import Navbar from './component/navbar/Navbar';
-import Sidebar from './component/sidebar/Sidebar';
-import './AdminPanel.css';
+import {  useEffect,useState } from "react";
+import Navbar from "./component/navbar/Navbar";
+//import "./AdminPanel.css";
+import axios from "axios";
 import { useHistory, withRouter } from "react-router-dom";
+import './Sidebar1.css';
 
+const AdminPanel = () => {
+  let history = useHistory();
+  const logout = () => {
+    localStorage.removeItem("login2");
+    history.push("/");
+  };
+  const lo = JSON.parse(localStorage.getItem("login2"));
+  const[users,setUser]=useState([]);
 
+  useEffect(() => {
+    loadUsers();
+  }, []);
 
+  const loadUsers = async () => {
+    const result = await axios.get("http://localhost:3004/posts?_limit=2");
+    setUser(result.data);
+    
+  };
+  
 
-
-const AdminPanel=()=>{
-    let history=useHistory();
-    const logout = () => {
-        localStorage.removeItem('login');
-        history.push("/");
-      };
-      const count=parseInt(localStorage.getItem('count'))
-    const [sidebarOpen,setSidebarOpen] = useState(false);
-    const openSidebar=()=>{
-        setSidebarOpen(true);
-    }
-    const closeSidebar=()=>{
-        setSidebarOpen(false);
-    };
-    return(
-        <div className="container">
-        <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
-        <button className="log" onClick={() => logout()}>
+  return (
+    <div className="container">
+    <Navbar />
+    <input type="checkbox" id="check" />
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+    <header>My App</header>
+  <ul>
+<li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+<li><a href="/home"><i class="fas fa-home"></i>Home</a></li>
+<li><a href="/bloga"><i class="fas fa-image"></i>blog</a></li>
+<li><a href="/contact"><i class="far fa-envelope"></i>Contact</a></li>
+</ul>
+</div>
+      
+      <button className="log" onClick={() => logout()}>
         Log Out
+        <br />
       </button>
-      <div>
-      <h1>React Dashboard </h1>
-      <h1>{count}</h1>
+      <i className="fa fa-user user">{lo.username} </i>
+      <div className="adminpost">
+        {users.map((user,index)=>(
+          <div>
+          <p>{user.title}:{user.viewcount}</p>
+          
+          </div>
+
+
+        ))}
       </div>
-        <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
-        </div>
-
-
-    );
+    </div>
+  );
 };
 export default withRouter(AdminPanel);

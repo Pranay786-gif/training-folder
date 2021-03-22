@@ -39,7 +39,7 @@ const AddPost = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     await axios.post("http://localhost:3004/posts", user,);
-    history.push("/blog");
+    history.push("/");
   };
   /*const modules = {
     toolbar: [
