@@ -119,30 +119,6 @@ const Home = () => {
         <br></br>
         <br></br>
         <br></br>
-        <div className="list">
-          <ReactBootStrap.Container>
-            <h3>Products</h3>
-            <ReactBootStrap.Row>
-              <ReactBootStrap.Col height="250px">Soap</ReactBootStrap.Col>
-              <ReactBootStrap.Col>Milk</ReactBootStrap.Col>
-              <ReactBootStrap.Col>Butter</ReactBootStrap.Col>
-            </ReactBootStrap.Row>
-          </ReactBootStrap.Container>
-        </div>
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
         <br></br>
         <h2>Client Portfolio</h2>
         <ReactBootStrap.Table striped bordered hover>
@@ -176,7 +152,10 @@ const Home = () => {
           </tbody>
         </ReactBootStrap.Table>
       </div>
+      <br></br>
+      <br></br>
       <Footer />
+     
     </div>
   );
 };

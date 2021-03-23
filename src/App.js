@@ -22,7 +22,7 @@ import ForgetPass1 from './component/ForgetPass1';
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import AdminPanel from './AdminPanel';
 import ProtectedRoute from './component/ProtectedRoute';
-import Navbar from './component/Navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
