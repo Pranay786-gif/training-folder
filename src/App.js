@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './component/Home';
+
 import Contact from './component/contact/Contact';
 import EditContact from './component/contact/EditContact';
 import ViewContact from './component/contact/ViewContact';
@@ -50,6 +51,7 @@ function App() {
               <Route  exact path="/forgetpass" component={ForgetPass} />
               <Route  exact path="/forgetpass1" component={ForgetPass1} />
               <Route  exact path="/home"  component={Home} />
+             
               <Route exact path="/contact"  component={Contact} /> 
               <Route exact path="/editcontact/:id"  component={EditContact} />
               <Route exact path="/viewcontact/:id"  component={ViewContact} />

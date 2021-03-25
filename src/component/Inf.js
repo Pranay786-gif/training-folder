@@ -33,7 +33,8 @@ const Inf=()=>{
     <header>My App</header>
   <ul>
 <li><a href="/admin"><i class="fas fa-qrcode"></i>Dashboard</a></li>
-<li><a href="/"><i class="fas fa-home"></i>Home</a></li>
+<li><a href="/blogb"><i class="fas fa-home"></i>Home</a></li>
+<li><a href="/userlist"><i class="fas fa-user"></i>users</a></li>
 <li><a href="/bloga"><i class="fas fa-image"></i>blog</a></li>
 <li><a href="/inf"><i class="far fa-envelope"></i>Contact</a></li>
 </ul>
