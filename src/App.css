@@ -163,14 +163,14 @@ select {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.container{
+.container1{
   display:flex;
   justify-content:center;
-  padding-right:3px;
+ 
   
 }
 .carp{
-  margin-right:15px;
+  margin-right:1px;
   width:100%;
 }
 

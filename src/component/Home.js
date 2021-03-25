@@ -63,7 +63,8 @@ const Home = () => {
         <br></br>
         <br></br>
         <h2>Client Portfolio</h2>
-        <div className="container">
+        <hr color="white"></hr>
+        <div className="container1">
           <div className="carp">
             <Card style={{ width: "18rem" }}>
               <Card.Body>
