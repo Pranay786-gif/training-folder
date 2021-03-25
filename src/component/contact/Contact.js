@@ -67,11 +67,10 @@ const Contact = () => {
           <br></br>
             <h1>Contact Form</h1>
             <form onSubmit={e => onSubmit(e)}>
-                <div class="mb-3">
+                <div class="mb-3 " >
                     <input type="text" className="form-control" placeholder="Enter your name" name="username" value={username} onChange={e=>onInputChange(e)}  />                    
-                    <input type="text" className="form-control" placeholder="email" name="email" value={email} onChange={e=>onInputChange(e)} />  
-                    <input type="text" className="form-control" placeholder="message" name="message" value={message} onChange={e=>onInputChange(e)} /> 
-                  
+                   <a href="mailto:pranaydwivedi231@gmail.com"><input type="text" className="form-control" placeholder="email" name="email" value={email} onChange={e=>onInputChange(e)} />  </a> 
+                    <textarea type="text" className="form-control" placeholder="message" name="message" value={message} rows="5" onChange={e=>onInputChange(e)} /> 
                 </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
             </form>

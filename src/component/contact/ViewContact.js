@@ -18,7 +18,9 @@ const ViewContact=()=>{
      const loadUser = async  ()=>{
         const result = await axios.get(`http://localhost:3003/informations/${id}`);
         setUser(result.data);
+        console.log(result.data.username)
     }
+   
 
     return(
         <div className="container py-4">

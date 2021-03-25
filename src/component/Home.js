@@ -1,93 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import Navbar from "./Navbar";
-import axios from "axios";
 import Footer from "./Footer";
-import { Link,useHistory } from "react-router-dom";
-
+import { useHistory } from "react-router-dom";
 
 const Home = () => {
-  let history=useHistory();
-  const handleChange=()=>{
-    if(localStorage.getItem('login2')){
-
-      history.push('/home')
-    } else{
-      history.push('/login')
+  let history = useHistory();
+  const handleChange = () => {
+    if (localStorage.getItem("login2")) {
+      history.push("/home");
+    } else {
+      history.push("/login");
     }
- 
-
-  }
-
-  
-  const [users, setUser] = useState([]);
-  useEffect(() => {
-    loadUsers();
-  }, []);
-
-  const loadUsers = async () => {
-    const result = await axios.get("http://localhost:3002/users");
-    setUser(result.data.reverse());
-  };
-  const deleteUser = async (id) => {
-    await axios.delete(`http://localhost:3002/users/${id}`);
-    loadUsers();
   };
 
   return (
     <div>
-        <Navbar />
-        <button onClick={()=>handleChange()} className="btn btn-outline-danger loginl">Login</button>
-            
-      <Link to="/adduser" className="btn btn-outline-light add">
-        Add User
-      </Link>
-    
+      <Navbar />
+      <button
+        onClick={() => handleChange()}
+        className="btn btn-outline-danger loginl"
+      >
+        Login
+      </button>
+
       <div className="app">
-        <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-              <th scope="col">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {users.map((user, index) => (
-              <tr>
-                <th scopr="row">{index + 1}</th>
-                <td>{user.name}</td>
-                <td>{user.username}</td>
-                <td>{user.email}</td>
-                <td>
-                  <Link class="btn btn-primary mr-2" to={`viewuser/${user.id}`}>
-                    View
-                  </Link>
-                  <Link
-                    class="btn btn-outline-primary"
-                    to={`edituser/${user.id}`}
-                  >
-                    Edit
-                  </Link>
-                  <Link
-                    class="btn btn-danger"
-                    onClick={() => deleteUser(user.id)}
-                  >
-                    Deleat
-                  </Link>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
         <ReactBootStrap.Carousel>
           <ReactBootStrap.Carousel.Item>
             <img className="d-block w-50" src="img 2.jpg" alt="First slide" />
@@ -97,7 +35,11 @@ const Home = () => {
             </ReactBootStrap.Carousel.Caption>
           </ReactBootStrap.Carousel.Item>
           <ReactBootStrap.Carousel.Item>
-            <img className="d-block w-50" src="img 3.jpg" alt="Second slide" />
+            <img
+              className="d-block w-50 img"
+              src="img 3.jpg"
+              alt="Second slide"
+            />
 
             <ReactBootStrap.Carousel.Caption>
               <h3>Second slide label</h3>
@@ -121,41 +63,67 @@ const Home = () => {
         <br></br>
         <br></br>
         <h2>Client Portfolio</h2>
-        <ReactBootStrap.Table striped bordered hover>
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>client</th>
-              <th>industry</th>
-              <th>type of engagement</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Mranay pvt ltd</td>
-              <td>Aanufacturing</td>
-              <td>Annual Audit</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Pranay pvt ltd</td>
-              <td>service</td>
-              <td>Half Year Review</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td> AGP ltd</td>
-              <td> Service </td>
-              <td>One Month Audit</td>
-            </tr>
-          </tbody>
-        </ReactBootStrap.Table>
+        <div className="container">
+          <div className="carp">
+            <Card style={{ width: "18rem" }}>
+              <Card.Body>
+                <Card.Title>Seimens Pvt Ltd</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">
+                  -Chief Executive
+                </Card.Subtitle>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.Lorem Ipsum is simply dummy
+                  text of the printing and typesetting industry. Lorem Ipsum has
+                  been the industry's standard dummy text ever since the 1500s,
+                  when an unknown printer took a galley of type and scrambled it
+                  to make a type specimen book
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="carp">
+            <Card style={{ width: "18rem" }}>
+              <Card.Body>
+                <Card.Title>AGP Private Limited</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">
+                  -Senior Manager
+                </Card.Subtitle>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.t is a long established fact
+                  that a reader will be distracted by the readable content of a
+                  page when looking at its layout. The point of using Lorem
+                  Ipsum is that it has a more-or-less normal distribution of
+                  letters
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+          <div>
+            <Card style={{ width: "18rem" }}>
+              <Card.Body>
+                <Card.Title>Appollo Pharma Limited</Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">
+                  -Director
+                </Card.Subtitle>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.Contrary to popular belief,
+                  Lore Latin literature from 45 BC, making it over 2000
+                  years old. Richard Mm Ipsum is not simply random text. It has roots in a piece
+                  of classicalcClintock.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+        </div>
       </div>
       <br></br>
       <br></br>
+      <br></br>
+      <br></br>
       <Footer />
-     
     </div>
   );
 };

@@ -1,5 +1,5 @@
 .App {
-text-align: center;
+  text-align: center;
 }
 
 .App-logo {
@@ -12,17 +12,12 @@ text-align: center;
     animation: App-logo-spin infinite 20s linear;
   }
 }
-.navbar{
-  margin: 0rem ;
-  
- 
-  
-  
+.navbar {
+  margin: 0rem;
 }
 
-
 .App-header {
-  background-color: #282c34; 
+  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -31,13 +26,12 @@ text-align: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.background{
-  background-image: url('./img1.webp');
+.background {
+  background-image: url("./img1.webp");
   background-size: cover;
-  max-width:100%;
+  max-width: 100%;
   min-height: 800px;
 }
-
 
 .App-link {
   color: #61dafb;
@@ -52,266 +46,218 @@ text-align: center;
   }
 }
 
-.list{
+.list {
   border: 2px solid black;
   color: red;
   font-size: large;
   font-weight: bold;
-  
 }
-.contact{
-  background-color: gray; 
-  font-size: large; 
+.contact {
+  background-color: gray;
+  font-size: large;
   font-weight: bold;
   padding: 37px;
 }
 
-
-.form{ 
-  
+.form {
   background-color: lightgray;
   margin: 0px 50px;
   display: flexbox;
   margin: 2px auto;
 }
-.list{
+.list {
   color: white;
   font-size: large;
   font-weight: bold;
-  
-    border: none;
-}
-.table{
 
+  border: none;
+}
+.table {
   background-color: lightgray;
 }
-  
 
-.login{
+.login {
   background-color: rgb(216, 212, 212);
- 
-    margin-top: 0px;
-    margin-right: 298px;
-    margin-left: 313px;
-  
-    padding: 36px 2px;
+
+  margin-top: 0px;
+  margin-right: 298px;
+  margin-left: 313px;
+
+  padding: 36px 2px;
 }
-.logo{
-  padding-top:105px;
+.logo {
+  padding-top: 105px;
 }
-.log{
+.log {
   position: relative;
   left: 1140px;
-    top: -72px;
-    background-color: lightslategray;
-  
+  top: -72px;
+  background-color: lightslategray;
 }
 
-.forget{
+.forget {
   position: relative;
-    left: -168px;
+  left: -168px;
 }
-.post{
+.post {
   position: relative;
   left: 1197px;
-    top: -30px;
-    background-color: lightslategray;
-  
+  top: -30px;
+  background-color: lightslategray;
 }
-.password-icon{
+.password-icon {
   position: relative;
   top: -31px;
   right: -194px;
-  cursor:pointer;
+  cursor: pointer;
 }
-.footer{
-  
-  padding:1rem;
-  color:white;
-  background-color:rgb(46, 44, 44);
-  position:fixed;
-  bottom:0;
-  left:0;
-  width:100%
+.footer {
+  padding: 1rem;
+  color: white;
+  background-color: rgb(46, 44, 44);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
-button, select {
+button,
+select {
   text-transform: none;
   position: absolute;
   display: inherit;
   background-color: blue;
 }
-.add{
+
+.add {
   position: relative;
-  left:500px;
+  left: 500px;
 }
-.loginl{
+.loginl {
   position: relative;
-  left:700px;
+  left: 515px;
+  top: -44px;
 }
-.text{
-  display:block;
-  overflow:hidden;
+.text {
+  display: block;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-
-
 }
-.navu{
-  position:fixed;
-  top:0;
-  left:0;
- 
+.navu {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
-.error{
-  color:white;
+.error {
+  color: white;
   font-size: large;
   font-weight: bold;
-  
 }
-.rect{
-  background-color:lightgray;
+.rect {
+  background-color: lightgray;
 }
-.adminpost{
-  background-color:grey;
-  width:40%;
-  padding-top:5px;
+.adminpost {
+  background-color: grey;
+  width: 40%;
+  padding-top: 5px;
   padding-bottom: 5px;
 }
-
-                  
+.container{
+  display:flex;
+  justify-content:center;
+  padding-right:3px;
   
-@media (max-width:1114px) {
-  
- .add{
-   position:relative;
-   left:130px;
- }
- 
 }
-@media (max-width:1473px) {
-  
-  .loginl{
-    position:relative;
-    left:120px;
+.carp{
+  margin-right:15px;
+  width:100%;
+}
+
+
+@media (max-width: 1114px) {
+  .add {
+    position: relative;
+    left: 130px;
   }
-   
- }
- @media (max-width:520px) {
-  
-  .background{
-    max-width:100%;
-    height:auto
+}
+@media (max-width: 1473px) {
+  .loginl {
+    position: relative;
+    left: 120px;
   }
-   
- }
- @media (max-width:1200px) {
-  
-  .login{
-    width:55%;
+}
+@media (max-width: 520px) {
+  .background {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 1200px) {
+  .login {
+    width: 55%;
     margin: 2px auto;
-
   }
-   
- }
- @media (max-width:993px) {
-  
-  .login{
-    width:70%;
+}
+@media (max-width: 993px) {
+  .login {
+    width: 70%;
     margin: 2px auto;
-
   }
-   
- }
-
-@media (max-width:771px) {
- 
- .login{
-   width:80%;
-   margin: 2px auto;
-
- }
- .forget{
-  position:relative;
-  left:71px;
-
-}
-  
 }
 
-@media (max-width:549px) {
- 
-  .password-icon{
-    position:relative;
-    right:-167px;
+@media (max-width: 771px) {
+  .login {
+    width: 80%;
+    margin: 2px auto;
   }
-   
- }
- @media (max-width:481px) {
- 
-  .password-icon{
-    position:relative;
-    right:-120px;
+  .forget {
+    position: relative;
+    left: 71px;
   }
-   
- }
- @media (max-width:1334px) {
- 
- 
- .log{
-   left:800px
- }
-   
- }
- @media (max-width:992px) {
- 
- 
-  .log{
+}
 
-    left:600px;
-    top:-30px;
+@media (max-width: 549px) {
+  .password-icon {
+    position: relative;
+    right: -167px;
   }
-    
+}
+@media (max-width: 481px) {
+  .password-icon {
+    position: relative;
+    right: -120px;
   }
-  @media (max-width:770px) {
- 
- 
-    .log{
-  
-      left:500px;
-      
-    }
-      
-    }
-    @media (max-width:656px) {
- 
- 
-      .log{
-    
-        left:400px;
-        
-      }
-        
-      }
-      @media (max-width:502px) {
- 
- 
-        .log{
-      
-          left:300px;
-          
-        }
-          
-        }
-        @media (max-width:401px) {
- 
- 
-          .log{
-        
-            left:250px;
-            
-          }
-            
-          }
- 
+}
+@media (max-width: 1334px) {
+  .log {
+    left: 800px;
+  }
+}
+@media (max-width: 992px) {
+  .log {
+    left: 600px;
+    top: -30px;
+  }
+}
+@media (max-width: 770px) {
+  .log {
+    left: 500px;
+  }
+}
+@media (max-width: 656px) {
+  .log {
+    left: 400px;
+  }
+}
+@media (max-width: 502px) {
+  .log {
+    left: 300px;
+  }
+}
+@media (max-width: 401px) {
+  .log {
+    left: 250px;
+  }
+}
 

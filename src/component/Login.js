@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState,useEffect} from "react";
 import { useHistory,Link } from "react-router-dom";
 //import AuthApi from './AuthApi';
 import Footer from "./Footer";
-
+import axios from 'axios';
 const Login = () => {
   //const Auth=React.useContext(AuthApi);
   let history = useHistory();
@@ -11,19 +11,33 @@ const Login = () => {
     password: "",
   });
   const[error,setError]=useState('')
+  const [value,setValue] = useState({
+    name:"",
+    password:"",
+ });
   const[show,setShow]=useState(false)
   const { username, password } = user;
   const onInputChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
+  useEffect(()=>{
+    loadUser()
+  },[])
+  const loadUser = async  ()=>{
+    const result = await axios.get("http://localhost:3005/users/1");
+   setValue(result.data);
+}
+console.log(value.password)
+
   //console.log(localStorage.getItem('login1'));
   //console.log(localStorage.getItem('login'))
-  console.log(user.username)
+ // console.log(user.username)
+  
   const onSubmit = (e) => {
     e.preventDefault();
 
-    if (user.username === JSON.parse(localStorage.getItem("username")) && user.password === JSON.parse(localStorage.getItem("password"))) {
-      localStorage.setItem("login2", JSON.stringify(user));
+    if (user.username === (value.username)/*JSON.parse(localStorage.getItem("username"))*/ && user.password === (value.password)/*JSON.parse(localStorage.getItem("password"))*/ ) {
+      localStorage.setItem("login2", JSON.stringify(value));
       history.push("/admin");
 
       
